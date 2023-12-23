@@ -104,6 +104,7 @@ button.onclick = function() {
     }
     if(document.querySelectorAll(".show")[0].innerHTML == "0"){
         document.querySelectorAll(".show")[0].innerHTML = "0";
+        num1 = 0
     }else{
         document.querySelectorAll(".show")[0].innerHTML += button.textContent;
     }
