@@ -35,33 +35,31 @@ function delen(){
     znak = "/";
 }
 function result(){
-    if(num1 != 0){
-        num2 = +document.querySelectorAll(".show")[0].innerHTML;
-        if(znak == "+"){
-            document.querySelectorAll(".show")[0].innerHTML = num1 + num2;
+    num2 = +document.querySelectorAll(".show")[0].innerHTML;
+    if(znak == "+"){
+        document.querySelectorAll(".show")[0].innerHTML = num1 + num2;
+        clear = 1;
+        // document.querySelectorAll(".show")[0].innerHTML = "0";
+    }else if(znak == "-"){
+        document.querySelectorAll(".show")[0].innerHTML = num1 - num2;
+        clear = 1;
+        // document.querySelectorAll(".show")[0].innerHTML = "0";
+    }else if(znak == "*"){
+        document.querySelectorAll(".show")[0].innerHTML = num1 * num2;
+        clear = 1;
+        // document.querySelectorAll(".show")[0].innerHTML = "0";
+    }else if(znak == "/"){
+        if(num2 == 0){
+            alert("Error");
+            document.querySelectorAll(".show")[0].innerHTML = "0";
+        }else{
+            document.querySelectorAll(".show")[0].innerHTML = num1 / num2;
             clear = 1;
             // document.querySelectorAll(".show")[0].innerHTML = "0";
-        }else if(znak == "-"){
-            document.querySelectorAll(".show")[0].innerHTML = num1 - num2;
-            clear = 1;
-            // document.querySelectorAll(".show")[0].innerHTML = "0";
-        }else if(znak == "*"){
-            document.querySelectorAll(".show")[0].innerHTML = num1 * num2;
-            clear = 1;
-            // document.querySelectorAll(".show")[0].innerHTML = "0";
-        }else if(znak == "/"){
-            if(num2 == 0){
-                alert("Error");
-                document.querySelectorAll(".show")[0].innerHTML = "0";
-            }else{
-                document.querySelectorAll(".show")[0].innerHTML = num1 / num2;
-                clear = 1;
-                // document.querySelectorAll(".show")[0].innerHTML = "0";
-            }
         }
-        num1 = 0;
-        num2 = 0;
     }
+    num1 = 0;
+    num2 = 0;
 }
 
 let parent = document.querySelectorAll(".parent")[0];
@@ -104,7 +102,6 @@ button.onclick = function() {
     }
     if(document.querySelectorAll(".show")[0].innerHTML == "0"){
         document.querySelectorAll(".show")[0].innerHTML = "0";
-        num1 = 0
     }else{
         document.querySelectorAll(".show")[0].innerHTML += button.textContent;
     }
