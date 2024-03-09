@@ -16,22 +16,26 @@ function onmouseu(x){
 }
 function plus(){
     num1 = +document.querySelectorAll(".show")[0].innerHTML;
-    document.querySelectorAll(".show")[0].innerHTML = "0";
+    // document.querySelectorAll(".show")[0].innerHTML = "0";
+    clear = 1;
     znak = "+";
 }
 function minus(){
     num1 = +document.querySelectorAll(".show")[0].innerHTML;
-    document.querySelectorAll(".show")[0].innerHTML = "0";
+    // document.querySelectorAll(".show")[0].innerHTML = "0";
+    clear = 1;
     znak = "-";
 }
 function multi(){
     num1 = +document.querySelectorAll(".show")[0].innerHTML;
-    document.querySelectorAll(".show")[0].innerHTML = "0";
+    // document.querySelectorAll(".show")[0].innerHTML = "0";
+    clear = 1;
     znak = "*";
 }
 function delen(){
     num1 = +document.querySelectorAll(".show")[0].innerHTML;
-    document.querySelectorAll(".show")[0].innerHTML = "0";
+    // document.querySelectorAll(".show")[0].innerHTML = "0";
+    clear = 1;
     znak = "/";
 }
 function result(){
